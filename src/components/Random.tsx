@@ -1,8 +1,6 @@
-import React from "react";
-import { useContext } from "react";
-import { CounterContext } from "../App";
+import { useCounter } from "../hooks/useCounter";
 
 export default function Random() {
-  const { counter } = useContext(CounterContext);
+  const { counter } = useCounter();
   return <div>{counter}</div>;
 }

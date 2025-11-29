@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { CounterContext } from "../App";
+import { useCounter } from "../hooks/useCounter";
 
 export default function GrandChild() {
-  const { counter, setCounter } = useContext(CounterContext);
+  const { counter, setCounter } = useCounter();
   return (
     <>
       <h1>{counter}</h1>
