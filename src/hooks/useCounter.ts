@@ -4,7 +4,7 @@ import { CounterContext } from "../contexts/CounterContext";
 export function useCounter() {
   const context = useContext(CounterContext);
 
-  if (!context) {
+  if (context === null) {
     throw new Error("useCounter must be used within a CounterContext.Provider");
   }
 

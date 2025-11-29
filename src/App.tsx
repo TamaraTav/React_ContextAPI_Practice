@@ -8,7 +8,7 @@ function App() {
   const [counter, setCounter] = useState<number>(0);
   return (
     <>
-      <button onClick={() => setCounter(counter + 1)}>Increase</button>
+      <button onClick={() => setCounter((prev) => prev + 1)}>Increase</button>
       <CounterContext.Provider value={{ counter, setCounter }}>
         <Parent />
         <Random />
